@@ -13,8 +13,6 @@ This is a lightweight Model Context Protocol (MCP) server built for [Gaggiuino](
 ## Features
 📊 Real-time access to shot telemetry
 
-🧩 Easy to extend with new endpoints
-
 🌐 Designed for local network access
 
 ## How to use
