@@ -2,6 +2,7 @@ from typing import Any
 import httpx
 from mcp.server.fastmcp import FastMCP
 import json
+import asyncio
 
 # Initialize FastMCP server
 mcp = FastMCP("gaggiuino")
@@ -10,14 +11,24 @@ mcp = FastMCP("gaggiuino")
 API_BASE = "http://gaggiuino.local"
 
 
-async def make_gg_request(url: str) -> dict[str, Any] | None:
+async def make_gg_request(url: str, retries: int = 3, delay: float = 1.5) -> dict[str, Any] | None:
     async with httpx.AsyncClient() as client:
-        try:
-            response = await client.get(url, timeout=30.0)
-            response.raise_for_status()
-            return response.json()
-        except Exception:
-            return None
+        for attempt in range(retries):
+            try:
+                print(f"[Attempt {attempt + 1}] Fetching {url}")
+                response = await client.get(url, timeout=10.0)
+                response.raise_for_status()
+                return response.json()
+            except (httpx.RequestError, httpx.TimeoutException) as e:
+                print(f"[Attempt {attempt + 1}] Network error: {e}")
+                await asyncio.sleep(delay * (2 ** attempt))
+            except httpx.HTTPStatusError as e:
+                print(f"[Attempt {attempt + 1}] HTTP error {e.response.status_code}: {e.response.text}")
+                break
+            except Exception as e:
+                print(f"[Attempt {attempt + 1}] Unexpected error: {e}")
+                break
+    return None
         
 
 def format_datapoints(obj):
