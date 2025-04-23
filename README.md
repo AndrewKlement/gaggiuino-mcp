@@ -6,7 +6,7 @@ This is a lightweight Model Context Protocol (MCP) server built for [Gaggiuino](
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@AndrewKlement/gaggiuino-mcp/badge" alt="Gaggiuino Server MCP server" />
 </a>
 
-## The MCP server exposes a simple HTTP API that allows connected clients to:
+## Allows connected clients to:
 
 - Retrieve the current machine status
 
