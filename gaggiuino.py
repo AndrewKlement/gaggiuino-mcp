@@ -31,7 +31,7 @@ async def make_gg_request(url: str, retries: int = 3, delay: float = 1.5) -> dic
     return None
         
 
-def format_datapoints(obj):
+def format_datapoints(obj, step=5):
     if not isinstance(obj, dict):
         return obj
 
@@ -40,9 +40,9 @@ def format_datapoints(obj):
         if key == "datapoints" and isinstance(value, dict):
             # Scale & format all numeric values in datapoints
             result[key] = {
-                k: [float(f"{v / 10:.1f}") for v in v_list]
+                k: [float(f"{v / 10:.1f}") for v in v_list][::step]
                 for k, v_list in value.items()
-                if isinstance(v_list, list)
+                if isinstance(v_list, list) and k not in ['timeInShot', 'weightFlow', 'targetTemperature', 'targetPumpFlow', 'targetPressure']
             }
         else:
             # Recurse normally
