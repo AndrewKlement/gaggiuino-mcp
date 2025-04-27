@@ -44,6 +44,8 @@ def format_datapoints(obj, step=5):
                 for k, v_list in value.items()
                 if isinstance(v_list, list) and k not in ['timeInShot', 'weightFlow', 'targetTemperature', 'targetPumpFlow', 'targetPressure']
             }
+        elif key == "duration":
+            result[key] = float(f"{value / 10:.1f}")
         else:
             # Recurse normally
             result[key] = format_datapoints(value)
