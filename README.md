@@ -2,6 +2,8 @@
 Gaggiuino MCP Server
 This is a lightweight Model Context Protocol (MCP) server built for [Gaggiuino](https://github.com/Zer0-bit/gaggiuino), the open-source espresso machine controller for the Gaggia Classic. It is designed to integrate easily AI clients that want to display or analyze data from the Gaggiuino system in real time.
 
+This is an article I wrote about this project https://medium.com/@a.klement.w/dialing-in-espresso-using-mcp-server-0207819fe93a
+
 <a href="https://glama.ai/mcp/servers/@AndrewKlement/gaggiuino-mcp">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@AndrewKlement/gaggiuino-mcp/badge" alt="Gaggiuino Server MCP server" />
 </a>
