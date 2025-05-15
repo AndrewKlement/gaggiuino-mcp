@@ -1,4 +1,5 @@
 # gaggiuino-mcp
+[![smithery badge](https://smithery.ai/badge/@AndrewKlement/gaggiuino-mcp)](https://smithery.ai/server/@AndrewKlement/gaggiuino-mcp)
 Gaggiuino MCP Server
 This is a lightweight Model Context Protocol (MCP) server built for [Gaggiuino](https://github.com/Zer0-bit/gaggiuino), the open-source espresso machine controller for the Gaggia Classic. It is designed to integrate easily AI clients that want to display or analyze data from the Gaggiuino system in real time.
 
@@ -38,6 +39,14 @@ This is an article I wrote about this project https://medium.com/@a.klement.w/di
       }
   }
 }
+```
+
+### Installing via Smithery
+
+To install Gaggiuino Espresso Machine Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@AndrewKlement/gaggiuino-mcp):
+
+```bash
+npx -y @smithery/cli install @AndrewKlement/gaggiuino-mcp --client claude
 ```
 
 ### Available Toolsets
