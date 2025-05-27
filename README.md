@@ -1,5 +1,6 @@
 # gaggiuino-mcp
 [![smithery badge](https://smithery.ai/badge/@AndrewKlement/gaggiuino-mcp)](https://smithery.ai/server/@AndrewKlement/gaggiuino-mcp)
+
 Gaggiuino MCP Server
 This is a lightweight Model Context Protocol (MCP) server built for [Gaggiuino](https://github.com/Zer0-bit/gaggiuino), the open-source espresso machine controller for the Gaggia Classic. It is designed to integrate easily AI clients that want to display or analyze data from the Gaggiuino system in real time.
 
