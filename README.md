@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/andrewklement-gaggiuino-mcp-badge.png)](https://mseep.ai/app/andrewklement-gaggiuino-mcp)
+
 # gaggiuino-mcp
 [![smithery badge](https://smithery.ai/badge/@AndrewKlement/gaggiuino-mcp)](https://smithery.ai/server/@AndrewKlement/gaggiuino-mcp)
 
